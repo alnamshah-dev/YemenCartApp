@@ -1,0 +1,848 @@
+2025-05-24 00:01:03.996 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/Get/8c37f0f9-73dc-4f1e-11ba-08dd9a3cb349 - null null
+2025-05-24 00:01:04.012 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API)'
+2025-05-24 00:01:04.019 +03:00 [INF] Route matched with {action = "Get", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.Guid) on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:01:04.073 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__get_Item_0
+2025-05-24 00:01:04.085 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Category.GetCategory'.
+2025-05-24 00:01:04.092 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API) in 55.8116ms
+2025-05-24 00:01:04.097 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API)'
+2025-05-24 00:01:04.100 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/Get/8c37f0f9-73dc-4f1e-11ba-08dd9a3cb349 - 200 null application/json; charset=utf-8 103.3145ms
+2025-05-24 00:01:36.653 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7000/api/Category/Update - application/json 71
+2025-05-24 00:01:36.664 +03:00 [INF] CORS policy execution failed.
+2025-05-24 00:01:36.668 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 00:01:36.673 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.UpdateAsync (Ecommerce.API)'
+2025-05-24 00:01:36.680 +03:00 [INF] Route matched with {action = "Update", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateAsync(Ecommerce.Application.DTOs.Category.UpdateCategory) on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:01:36.708 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Categories] SET [Name] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-05-24 00:01:36.713 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 00:01:36.715 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.UpdateAsync (Ecommerce.API) in 29.3987ms
+2025-05-24 00:01:36.720 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.UpdateAsync (Ecommerce.API)'
+2025-05-24 00:01:36.727 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7000/api/Category/Update - 200 null application/json; charset=utf-8 74.6039ms
+2025-05-24 00:01:55.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 00:01:55.166 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:01:55.169 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:01:55.182 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 00:01:55.193 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:01:55.199 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 21.9326ms
+2025-05-24 00:01:55.204 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:01:55.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 47.3656ms
+2025-05-24 00:03:08.772 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Product/Add - application/json 184
+2025-05-24 00:03:08.783 +03:00 [INF] CORS policy execution failed.
+2025-05-24 00:03:08.786 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 00:03:08.788 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API)'
+2025-05-24 00:03:08.795 +03:00 [INF] Route matched with {action = "Add", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(Ecommerce.Application.DTOs.Product.CreateProduct) on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 00:03:08.842 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [CategoryId], [Description], [Image], [Name], [Price], [Quantity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-05-24 00:03:08.847 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 00:03:08.848 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API) in 48.9823ms
+2025-05-24 00:03:08.851 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API)'
+2025-05-24 00:03:08.854 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Product/Add - 200 null application/json; charset=utf-8 81.378ms
+2025-05-24 00:03:17.590 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/All - null null
+2025-05-24 00:03:17.602 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:03:17.609 +03:00 [INF] Route matched with {action = "All", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] All() on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 00:03:17.630 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 00:03:17.656 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.All (Ecommerce.API) in 36.7882ms
+2025-05-24 00:03:17.660 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:03:17.664 +03:00 [ERR] Sql exception
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Ecommerce.Domain.Entities.Product, Ecommerce.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Ecommerce.Application.DTOs.Product.GetProduct, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Product -> GetProduct
+Ecommerce.Domain.Entities.Product -> Ecommerce.Application.DTOs.Product.GetProduct
+   at lambda_method534(Closure, Product, GetProduct, ResolutionContext)
+   at lambda_method533(Closure, Object, IEnumerable`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method533(Closure, Object, IEnumerable`1, ResolutionContext)
+   at Ecommerce.Application.Services.Implementations.ProductService.GetAll() in C:\Users\USER\Desktop\Ecommerce\Ecommerce.Application\Services\Implementations\ProductService.cs:line 34
+   at Ecommerce.API.Controllers.ProductController.All() in C:\Users\USER\Desktop\Ecommerce\Ecommerce.API\Controllers\ProductController.cs:line 15
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Ecommerce.Infrastructure.Middleware.Handler.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\USER\Desktop\Ecommerce\Ecommerce.Infrastructure\Middleware\Handler\ExceptionHandlingMiddleware.cs:line 29
+2025-05-24 00:03:17.779 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/All - 500 null application/json 189.1871ms
+2025-05-24 00:03:36.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 00:03:36.801 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:03:36.807 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:03:36.817 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 00:03:36.822 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:03:36.824 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 10.9564ms
+2025-05-24 00:03:36.827 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:03:36.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 38.2151ms
+2025-05-24 00:03:40.094 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 00:03:40.106 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:03:40.108 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:03:40.118 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 00:03:40.122 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:03:40.125 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 8.9122ms
+2025-05-24 00:03:40.128 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:03:40.131 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 36.4307ms
+2025-05-24 00:03:42.751 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.html - null null
+2025-05-24 00:03:42.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.html - 200 null text/html;charset=utf-8 19.8748ms
+2025-05-24 00:03:42.786 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 00:03:42.786 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_vs/browserLink - null null
+2025-05-24 00:03:42.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 8.8888ms
+2025-05-24 00:03:42.817 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.0768ms
+2025-05-24 00:03:42.952 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - null null
+2025-05-24 00:03:42.970 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.7839ms
+2025-05-24 00:03:48.195 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/All - null null
+2025-05-24 00:03:48.206 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:03:48.208 +03:00 [INF] Route matched with {action = "All", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] All() on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 00:03:48.219 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 00:03:48.226 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.All (Ecommerce.API) in 11.0814ms
+2025-05-24 00:03:48.227 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:03:48.230 +03:00 [ERR] Sql exception
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Ecommerce.Domain.Entities.Product, Ecommerce.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Ecommerce.Application.DTOs.Product.GetProduct, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Product -> GetProduct
+Ecommerce.Domain.Entities.Product -> Ecommerce.Application.DTOs.Product.GetProduct
+   at lambda_method534(Closure, Product, GetProduct, ResolutionContext)
+   at lambda_method533(Closure, Object, IEnumerable`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method533(Closure, Object, IEnumerable`1, ResolutionContext)
+   at Ecommerce.Application.Services.Implementations.ProductService.GetAll() in C:\Users\USER\Desktop\Ecommerce\Ecommerce.Application\Services\Implementations\ProductService.cs:line 34
+   at Ecommerce.API.Controllers.ProductController.All() in C:\Users\USER\Desktop\Ecommerce\Ecommerce.API\Controllers\ProductController.cs:line 15
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Ecommerce.Infrastructure.Middleware.Handler.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\USER\Desktop\Ecommerce\Ecommerce.Infrastructure\Middleware\Handler\ExceptionHandlingMiddleware.cs:line 29
+2025-05-24 00:03:48.273 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/All - 500 null application/json 78.1483ms
+2025-05-24 00:04:13.832 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 00:04:13.840 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:04:13.846 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:04:13.858 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 00:04:13.870 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:04:13.872 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 18.0432ms
+2025-05-24 00:04:13.877 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:04:13.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 47.0006ms
+2025-05-24 00:12:00.975 +03:00 [INF] Application is building ............
+2025-05-24 00:12:01.239 +03:00 [INF] User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-24 00:12:01.350 +03:00 [INF] Application is running .........
+2025-05-24 00:12:01.478 +03:00 [INF] Now listening on: https://localhost:7000
+2025-05-24 00:12:01.482 +03:00 [INF] Now listening on: http://localhost:5269
+2025-05-24 00:12:01.489 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 00:12:01.493 +03:00 [INF] Hosting environment: Development
+2025-05-24 00:12:01.497 +03:00 [INF] Content root path: C:\Users\USER\Desktop\Ecommerce\Ecommerce.API
+2025-05-24 00:12:02.127 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.html - null null
+2025-05-24 00:12:02.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.html - 200 null text/html;charset=utf-8 294.8107ms
+2025-05-24 00:12:02.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 00:12:02.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_vs/browserLink - null null
+2025-05-24 00:12:02.445 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 21.8325ms
+2025-05-24 00:12:02.488 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.0865ms
+2025-05-24 00:12:02.698 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - null null
+2025-05-24 00:12:02.842 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 143.9576ms
+2025-05-24 00:13:46.428 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 00:13:46.452 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:13:46.504 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:13:49.841 +03:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 00:13:49.989 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:13:50.027 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 3509.6378ms
+2025-05-24 00:13:50.032 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:13:50.046 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 3617.3442ms
+2025-05-24 00:14:03.925 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Product/Add - application/json 193
+2025-05-24 00:14:03.940 +03:00 [INF] CORS policy execution failed.
+2025-05-24 00:14:03.942 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 00:14:03.946 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API)'
+2025-05-24 00:14:03.963 +03:00 [INF] Route matched with {action = "Add", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(Ecommerce.Application.DTOs.Product.CreateProduct) on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 00:14:04.626 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [CategoryId], [Description], [Image], [Name], [Price], [Quantity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-05-24 00:14:04.662 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 00:14:04.674 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API) in 701.1774ms
+2025-05-24 00:14:04.679 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API)'
+2025-05-24 00:14:04.684 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Product/Add - 200 null application/json; charset=utf-8 759.6619ms
+2025-05-24 00:14:12.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/All - null null
+2025-05-24 00:14:12.471 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:14:12.486 +03:00 [INF] Route matched with {action = "All", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] All() on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 00:14:12.582 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 00:14:12.611 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.All (Ecommerce.API) in 116.6087ms
+2025-05-24 00:14:12.616 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:14:12.624 +03:00 [ERR] Sql exception
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Ecommerce.Domain.Entities.Product, Ecommerce.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Ecommerce.Application.DTOs.Product.GetProduct, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Product -> GetProduct
+Ecommerce.Domain.Entities.Product -> Ecommerce.Application.DTOs.Product.GetProduct
+   at lambda_method155(Closure, Product, GetProduct, ResolutionContext)
+   at lambda_method154(Closure, Object, IEnumerable`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method154(Closure, Object, IEnumerable`1, ResolutionContext)
+   at Ecommerce.Application.Services.Implementations.ProductService.GetAll() in C:\Users\USER\Desktop\Ecommerce\Ecommerce.Application\Services\Implementations\ProductService.cs:line 34
+   at Ecommerce.API.Controllers.ProductController.All() in C:\Users\USER\Desktop\Ecommerce\Ecommerce.API\Controllers\ProductController.cs:line 15
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Ecommerce.Infrastructure.Middleware.Handler.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\USER\Desktop\Ecommerce\Ecommerce.Infrastructure\Middleware\Handler\ExceptionHandlingMiddleware.cs:line 29
+2025-05-24 00:14:12.764 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/All - 500 null application/json 301.6793ms
+2025-05-24 00:14:24.440 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 00:14:24.452 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:14:24.455 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:14:24.468 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 00:14:24.477 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:14:24.488 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 24.7432ms
+2025-05-24 00:14:24.492 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:14:24.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 55.9667ms
+2025-05-24 00:31:45.065 +03:00 [INF] Application is building ............
+2025-05-24 00:31:45.307 +03:00 [ERR] Application failed to start........
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\USER\Desktop\Ecommerce\Ecommerce.API\Program.cs:line 38
+2025-05-24 00:31:45.539 +03:00 [INF] Application is building ............
+2025-05-24 00:31:45.969 +03:00 [INF] User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-24 00:31:46.156 +03:00 [INF] Application is running .........
+2025-05-24 00:31:46.301 +03:00 [INF] Now listening on: https://localhost:7000
+2025-05-24 00:31:46.303 +03:00 [INF] Now listening on: http://localhost:5269
+2025-05-24 00:31:46.309 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 00:31:46.311 +03:00 [INF] Hosting environment: Development
+2025-05-24 00:31:46.312 +03:00 [INF] Content root path: C:\Users\USER\Desktop\Ecommerce\Ecommerce.API
+2025-05-24 00:31:46.546 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.html - null null
+2025-05-24 00:31:46.791 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.html - 200 null text/html;charset=utf-8 246.4951ms
+2025-05-24 00:31:46.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_vs/browserLink - null null
+2025-05-24 00:31:46.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 00:31:46.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 20.7746ms
+2025-05-24 00:31:46.842 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.3128ms
+2025-05-24 00:31:47.045 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - null null
+2025-05-24 00:31:47.170 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.2305ms
+2025-05-24 00:33:27.074 +03:00 [INF] Application is building ............
+2025-05-24 00:33:27.256 +03:00 [ERR] Application failed to start........
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\USER\Desktop\Ecommerce\Ecommerce.API\Program.cs:line 38
+2025-05-24 00:33:27.295 +03:00 [INF] Application is building ............
+2025-05-24 00:33:27.615 +03:00 [INF] User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-24 00:33:27.800 +03:00 [INF] Application is running .........
+2025-05-24 00:33:27.951 +03:00 [INF] Now listening on: https://localhost:7000
+2025-05-24 00:33:27.953 +03:00 [INF] Now listening on: http://localhost:5269
+2025-05-24 00:33:27.957 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 00:33:27.959 +03:00 [INF] Hosting environment: Development
+2025-05-24 00:33:27.962 +03:00 [INF] Content root path: C:\Users\USER\Desktop\Ecommerce\Ecommerce.API
+2025-05-24 00:33:28.302 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.html - null null
+2025-05-24 00:33:28.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.html - 200 null text/html;charset=utf-8 336.2698ms
+2025-05-24 00:33:28.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 00:33:28.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_vs/browserLink - null null
+2025-05-24 00:33:28.671 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 12.7205ms
+2025-05-24 00:33:28.708 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.9359ms
+2025-05-24 00:33:28.834 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - null null
+2025-05-24 00:33:28.985 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.9251ms
+2025-05-24 00:34:19.471 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 00:34:19.500 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:34:19.551 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:34:22.984 +03:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 00:34:23.106 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:34:23.151 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 3585.8433ms
+2025-05-24 00:34:23.158 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:34:23.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 404 null application/json; charset=utf-8 3709.0646ms
+2025-05-24 00:34:40.885 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/All - null null
+2025-05-24 00:34:40.896 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:34:40.907 +03:00 [INF] Route matched with {action = "All", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] All() on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 00:34:41.107 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 00:34:41.125 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Product.GetProduct, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:34:41.137 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.All (Ecommerce.API) in 223.4572ms
+2025-05-24 00:34:41.144 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:34:41.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/All - 404 null application/json; charset=utf-8 261.1133ms
+2025-05-24 00:35:25.957 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Category/Add - application/json 23
+2025-05-24 00:35:25.967 +03:00 [INF] CORS policy execution failed.
+2025-05-24 00:35:25.970 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 00:35:25.973 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.AddAsync (Ecommerce.API)'
+2025-05-24 00:35:25.994 +03:00 [INF] Route matched with {action = "Add", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAsync(Ecommerce.Application.DTOs.Category.CreateCategory) on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:35:26.450 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([Id], [Name])
+VALUES (@p0, @p1);
+2025-05-24 00:35:26.477 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 00:35:26.490 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.AddAsync (Ecommerce.API) in 487.0798ms
+2025-05-24 00:35:26.494 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.AddAsync (Ecommerce.API)'
+2025-05-24 00:35:26.502 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Category/Add - 200 null application/json; charset=utf-8 544.3799ms
+2025-05-24 00:35:41.267 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 00:35:41.275 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:35:41.279 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:35:41.302 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 00:35:41.331 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 00:35:41.340 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 52.2875ms
+2025-05-24 00:35:41.345 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 00:35:41.349 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 81.382ms
+2025-05-24 00:35:52.388 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/Get/6e21c9b7-1d15-4229-0f1c-08dd9a41bb3e - null null
+2025-05-24 00:35:52.398 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API)'
+2025-05-24 00:35:52.414 +03:00 [INF] Route matched with {action = "Get", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.Guid) on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:35:52.707 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__get_Item_0
+2025-05-24 00:35:52.729 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Category.GetCategory'.
+2025-05-24 00:35:52.733 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API) in 309.635ms
+2025-05-24 00:35:52.737 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API)'
+2025-05-24 00:35:52.744 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/Get/6e21c9b7-1d15-4229-0f1c-08dd9a41bb3e - 200 null application/json; charset=utf-8 356.0967ms
+2025-05-24 00:37:09.829 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Product/Add - application/json 188
+2025-05-24 00:37:09.836 +03:00 [INF] CORS policy execution failed.
+2025-05-24 00:37:09.839 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 00:37:09.843 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API)'
+2025-05-24 00:37:09.852 +03:00 [INF] Route matched with {action = "Add", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Add(Ecommerce.Application.DTOs.Product.CreateProduct) on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 00:37:09.976 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [CategoryId], [Description], [Image], [Name], [Price], [Quantity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-05-24 00:37:09.987 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 00:37:09.992 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API) in 134.7169ms
+2025-05-24 00:37:09.996 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.Add (Ecommerce.API)'
+2025-05-24 00:37:10.000 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Product/Add - 200 null application/json; charset=utf-8 170.5771ms
+2025-05-24 00:37:20.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/All - null null
+2025-05-24 00:37:20.291 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:37:20.299 +03:00 [INF] Route matched with {action = "All", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] All() on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 00:37:20.312 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 00:37:20.326 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.All (Ecommerce.API) in 22.6537ms
+2025-05-24 00:37:20.331 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 00:37:20.338 +03:00 [ERR] Sql exception
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Ecommerce.Domain.Entities.Product, Ecommerce.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Ecommerce.Application.DTOs.Product.GetProduct, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Product -> GetProduct
+Ecommerce.Domain.Entities.Product -> Ecommerce.Application.DTOs.Product.GetProduct
+   at lambda_method205(Closure, Product, GetProduct, ResolutionContext)
+   at lambda_method64(Closure, Object, IEnumerable`1, ResolutionContext)
+   --- End of inner exception stack trace ---
+   at lambda_method64(Closure, Object, IEnumerable`1, ResolutionContext)
+   at Ecommerce.Application.Services.Implementations.ProductService.GetAll() in C:\Users\USER\Desktop\Ecommerce\Ecommerce.Application\Services\Implementations\ProductService.cs:line 34
+   at Ecommerce.API.Controllers.ProductController.All() in C:\Users\USER\Desktop\Ecommerce\Ecommerce.API\Controllers\ProductController.cs:line 15
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Ecommerce.Infrastructure.Middleware.Handler.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\USER\Desktop\Ecommerce\Ecommerce.Infrastructure\Middleware\Handler\ExceptionHandlingMiddleware.cs:line 29
+2025-05-24 00:37:20.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/All - 500 null application/json 214.3179ms
+2025-05-24 00:37:45.027 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/Get/6e21c9b7-1d15-4229-0f1c-08dd9a41bb3e - null null
+2025-05-24 00:37:45.034 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API)'
+2025-05-24 00:37:45.037 +03:00 [INF] Route matched with {action = "Get", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.Guid) on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:37:45.051 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__get_Item_0
+2025-05-24 00:37:45.062 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Category.GetCategory'.
+2025-05-24 00:37:45.069 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API) in 27.0504ms
+2025-05-24 00:37:45.074 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API)'
+2025-05-24 00:37:45.082 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/Get/6e21c9b7-1d15-4229-0f1c-08dd9a41bb3e - 200 null application/json; charset=utf-8 54.4439ms
+2025-05-24 00:37:48.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/Get/6e21c9b7-1d15-4229-0f1c-08dd9a41bb3e - null null
+2025-05-24 00:37:48.080 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API)'
+2025-05-24 00:37:48.084 +03:00 [INF] Route matched with {action = "Get", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.Guid) on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 00:37:48.092 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__get_Item_0
+2025-05-24 00:37:48.104 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Category.GetCategory'.
+2025-05-24 00:37:48.107 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API) in 18.1884ms
+2025-05-24 00:37:48.110 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.Get (Ecommerce.API)'
+2025-05-24 00:37:48.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/Get/6e21c9b7-1d15-4229-0f1c-08dd9a41bb3e - 200 null application/json; charset=utf-8 41.1488ms
+2025-05-24 01:11:02.472 +03:00 [INF] Application is building ............
+2025-05-24 01:11:02.753 +03:00 [INF] User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-24 01:11:02.927 +03:00 [INF] Application is running .........
+2025-05-24 01:11:03.095 +03:00 [INF] Now listening on: https://localhost:7000
+2025-05-24 01:11:03.098 +03:00 [INF] Now listening on: http://localhost:5269
+2025-05-24 01:11:03.104 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 01:11:03.107 +03:00 [INF] Hosting environment: Development
+2025-05-24 01:11:03.110 +03:00 [INF] Content root path: C:\Users\USER\Desktop\Ecommerce\Ecommerce.API
+2025-05-24 01:11:03.589 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.html - null null
+2025-05-24 01:11:03.857 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.html - 200 null text/html;charset=utf-8 271.2043ms
+2025-05-24 01:11:03.868 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 01:11:03.868 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_vs/browserLink - null null
+2025-05-24 01:11:03.896 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 28.1453ms
+2025-05-24 01:11:03.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.0365ms
+2025-05-24 01:11:03.988 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - null null
+2025-05-24 01:11:04.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 146.1643ms
+2025-05-24 01:11:09.148 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:11:09.167 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:09.192 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:11:11.045 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:11:11.137 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:11:11.167 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 1965.9317ms
+2025-05-24 01:11:11.175 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:11.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 2044.4014ms
+2025-05-24 01:11:21.188 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/All - null null
+2025-05-24 01:11:21.197 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 01:11:21.206 +03:00 [INF] Route matched with {action = "All", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] All() on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 01:11:21.285 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 01:11:21.301 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Product.GetProduct, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:11:21.323 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.All (Ecommerce.API) in 111.5532ms
+2025-05-24 01:11:21.331 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 01:11:21.340 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/All - 200 null application/json; charset=utf-8 151.9508ms
+2025-05-24 01:11:47.368 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:11:47.377 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:47.381 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:11:47.409 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:11:47.414 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:11:47.418 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 31.0785ms
+2025-05-24 01:11:47.423 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:47.425 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 56.8443ms
+2025-05-24 01:11:49.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:11:49.298 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:49.303 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:11:49.316 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:11:49.325 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:11:49.328 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 16.0084ms
+2025-05-24 01:11:49.331 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:49.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 43.8661ms
+2025-05-24 01:11:49.885 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:11:49.896 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:49.903 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:11:49.909 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:11:49.914 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:11:49.917 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 9.2459ms
+2025-05-24 01:11:49.920 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:49.925 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 39.3551ms
+2025-05-24 01:11:50.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:11:50.328 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:50.332 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:11:50.339 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:11:50.347 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:11:50.352 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 14.1095ms
+2025-05-24 01:11:50.356 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:50.361 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 45.0543ms
+2025-05-24 01:11:50.698 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:11:50.706 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:50.711 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:11:50.716 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:11:50.728 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:11:50.730 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 16.2401ms
+2025-05-24 01:11:50.734 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:50.739 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 41.5608ms
+2025-05-24 01:11:51.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:11:51.021 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:51.025 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:11:51.031 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:11:51.041 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:11:51.045 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 15.4111ms
+2025-05-24 01:11:51.048 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:11:51.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 39.7123ms
+2025-05-24 01:12:42.629 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/Get/58c916b2-a1e6-415b-fa85-08dd9a41f913 - null null
+2025-05-24 01:12:42.645 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.Get (Ecommerce.API)'
+2025-05-24 01:12:42.662 +03:00 [INF] Route matched with {action = "Get", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.Guid) on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 01:12:42.861 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__get_Item_0
+2025-05-24 01:12:42.922 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Product.GetProduct'.
+2025-05-24 01:12:42.929 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.Get (Ecommerce.API) in 260.8796ms
+2025-05-24 01:12:42.937 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.Get (Ecommerce.API)'
+2025-05-24 01:12:42.941 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/Get/58c916b2-a1e6-415b-fa85-08dd9a41f913 - 200 null application/json; charset=utf-8 312.3699ms
+2025-05-24 01:16:06.167 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7000/api/Product/Update - application/json 236
+2025-05-24 01:16:06.177 +03:00 [INF] CORS policy execution failed.
+2025-05-24 01:16:06.180 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 01:16:06.184 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.Update (Ecommerce.API)'
+2025-05-24 01:16:06.189 +03:00 [INF] Route matched with {action = "Update", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Ecommerce.Application.DTOs.Product.UpdateProduct) on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 01:16:06.322 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@p6='?' (DbType = Guid), @p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [CategoryId] = @p0, [Description] = @p1, [Image] = @p2, [Name] = @p3, [Price] = @p4, [Quantity] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2025-05-24 01:16:06.342 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 01:16:06.349 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.Update (Ecommerce.API) in 153.1872ms
+2025-05-24 01:16:06.355 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.Update (Ecommerce.API)'
+2025-05-24 01:16:06.358 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7000/api/Product/Update - 200 null application/json; charset=utf-8 191.7523ms
+2025-05-24 01:16:24.847 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/All - null null
+2025-05-24 01:16:24.858 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 01:16:24.871 +03:00 [INF] Route matched with {action = "All", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] All() on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 01:16:24.881 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 01:16:24.888 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Product.GetProduct, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:16:24.894 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.All (Ecommerce.API) in 17.3034ms
+2025-05-24 01:16:24.896 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 01:16:24.900 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/All - 200 null application/json; charset=utf-8 52.4957ms
+2025-05-24 01:16:47.400 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:16:47.409 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:16:47.413 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:16:47.425 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:16:47.432 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:16:47.439 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 15.9457ms
+2025-05-24 01:16:47.442 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:16:47.444 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 44.4154ms
+2025-05-24 01:17:55.374 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Authentication/Create-User - application/json 122
+2025-05-24 01:17:55.384 +03:00 [INF] CORS policy execution failed.
+2025-05-24 01:17:55.386 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 01:17:55.388 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.AuthenticationController.CreateUser (Ecommerce.API)'
+2025-05-24 01:17:55.394 +03:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ecommerce.Application.DTOs.Identity.CreateUser) on controller Ecommerce.API.Controllers.AuthenticationController (Ecommerce.API).
+2025-05-24 01:17:55.482 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:17:55.615 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-05-24 01:17:55.703 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2025-05-24 01:17:55.727 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:17:55.748 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2025-05-24 01:17:55.771 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-05-24 01:17:55.797 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-05-24 01:17:55.806 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-05-24 01:17:55.836 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-05-24 01:17:55.905 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p17='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p18='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [Name] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+2025-05-24 01:17:55.927 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 01:17:55.932 +03:00 [INF] Executed action Ecommerce.API.Controllers.AuthenticationController.CreateUser (Ecommerce.API) in 532.4071ms
+2025-05-24 01:17:55.939 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.AuthenticationController.CreateUser (Ecommerce.API)'
+2025-05-24 01:17:55.941 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Authentication/Create-User - 200 null application/json; charset=utf-8 566.4785ms
+2025-05-24 01:20:17.240 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Cart/Save-Checkout - application/json 140
+2025-05-24 01:20:17.248 +03:00 [INF] CORS policy execution failed.
+2025-05-24 01:20:17.254 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 01:20:17.257 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CartController.SavingCheckout (Ecommerce.API)'
+2025-05-24 01:20:17.264 +03:00 [INF] Route matched with {action = "SavingCheckout", controller = "Cart", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavingCheckout(System.Collections.Generic.IEnumerable`1[Ecommerce.Application.DTOs.Cart.CreateAchieve]) on controller Ecommerce.API.Controllers.CartController (Ecommerce.API).
+2025-05-24 01:20:17.323 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Guid), @p3='?' (DbType = Int32), @p4='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Achieves] ([Id], [DateCreate], [ProductId], [Quantity], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-24 01:20:17.339 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 01:20:17.344 +03:00 [INF] Executed action Ecommerce.API.Controllers.CartController.SavingCheckout (Ecommerce.API) in 69.6663ms
+2025-05-24 01:20:17.347 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CartController.SavingCheckout (Ecommerce.API)'
+2025-05-24 01:20:17.351 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Cart/Save-Checkout - 200 null application/json; charset=utf-8 110.3742ms
+2025-05-24 01:21:21.791 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/PaymentMethod/Payment-Methods - null null
+2025-05-24 01:21:21.802 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.PaymentMethodController.GetPaymentMethods (Ecommerce.API)'
+2025-05-24 01:21:21.811 +03:00 [INF] Route matched with {action = "GetPaymentMethods", controller = "PaymentMethod", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Ecommerce.Application.DTOs.Cart.GetPaymentMethod]]] GetPaymentMethods() on controller Ecommerce.API.Controllers.PaymentMethodController (Ecommerce.API).
+2025-05-24 01:21:21.838 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [PaymentMethods] AS [p]
+2025-05-24 01:21:21.849 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Cart.GetPaymentMethod, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:21:21.856 +03:00 [INF] Executed action Ecommerce.API.Controllers.PaymentMethodController.GetPaymentMethods (Ecommerce.API) in 38.4998ms
+2025-05-24 01:21:21.860 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.PaymentMethodController.GetPaymentMethods (Ecommerce.API)'
+2025-05-24 01:21:21.865 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/PaymentMethod/Payment-Methods - 200 null application/json; charset=utf-8 74.4107ms
+2025-05-24 01:23:57.617 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Cart/Checkout - application/json 172
+2025-05-24 01:23:57.628 +03:00 [INF] CORS policy execution failed.
+2025-05-24 01:23:57.631 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 01:23:57.636 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CartController.Checkout (Ecommerce.API)'
+2025-05-24 01:23:57.642 +03:00 [INF] Route matched with {action = "Checkout", controller = "Cart", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Checkout(Ecommerce.Application.DTOs.Cart.Checkout) on controller Ecommerce.API.Controllers.CartController (Ecommerce.API).
+2025-05-24 01:23:57.675 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 01:23:57.693 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [PaymentMethods] AS [p]
+2025-05-24 01:23:59.387 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 01:23:59.392 +03:00 [INF] Executed action Ecommerce.API.Controllers.CartController.Checkout (Ecommerce.API) in 1745.2114ms
+2025-05-24 01:23:59.397 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CartController.Checkout (Ecommerce.API)'
+2025-05-24 01:23:59.400 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Cart/Checkout - 400 null application/json; charset=utf-8 1783.1405ms
+2025-05-24 01:28:30.914 +03:00 [INF] Application is building ............
+2025-05-24 01:28:31.266 +03:00 [INF] User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-24 01:28:31.412 +03:00 [INF] Application is running .........
+2025-05-24 01:28:31.559 +03:00 [INF] Now listening on: https://localhost:7000
+2025-05-24 01:28:31.561 +03:00 [INF] Now listening on: http://localhost:5269
+2025-05-24 01:28:31.566 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 01:28:31.568 +03:00 [INF] Hosting environment: Development
+2025-05-24 01:28:31.570 +03:00 [INF] Content root path: C:\Users\USER\Desktop\Ecommerce\Ecommerce.API
+2025-05-24 01:28:32.311 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.html - null null
+2025-05-24 01:28:32.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.html - 200 null text/html;charset=utf-8 271.1619ms
+2025-05-24 01:28:32.589 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 01:28:32.589 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_vs/browserLink - null null
+2025-05-24 01:28:32.611 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 21.0246ms
+2025-05-24 01:28:32.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.3376ms
+2025-05-24 01:28:32.738 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - null null
+2025-05-24 01:28:32.917 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 179.3404ms
+2025-05-24 01:28:44.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:28:44.894 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:28:44.920 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:28:46.216 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:28:46.284 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:28:46.309 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 1381.3347ms
+2025-05-24 01:28:46.313 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:28:46.323 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 1454.0544ms
+2025-05-24 01:33:00.210 +03:00 [INF] Application is building ............
+2025-05-24 01:33:00.473 +03:00 [INF] User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-24 01:33:00.587 +03:00 [INF] Application is running .........
+2025-05-24 01:33:00.718 +03:00 [INF] Now listening on: https://localhost:7000
+2025-05-24 01:33:00.721 +03:00 [INF] Now listening on: http://localhost:5269
+2025-05-24 01:33:00.725 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 01:33:00.727 +03:00 [INF] Hosting environment: Development
+2025-05-24 01:33:00.729 +03:00 [INF] Content root path: C:\Users\USER\Desktop\Ecommerce\Ecommerce.API
+2025-05-24 01:33:48.954 +03:00 [INF] Application is building ............
+2025-05-24 01:33:49.205 +03:00 [INF] User profile is available. Using 'C:\Users\USER\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-24 01:33:49.311 +03:00 [INF] Application is running .........
+2025-05-24 01:33:49.428 +03:00 [INF] Now listening on: https://localhost:7000
+2025-05-24 01:33:49.432 +03:00 [INF] Now listening on: http://localhost:5269
+2025-05-24 01:33:49.438 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 01:33:49.441 +03:00 [INF] Hosting environment: Development
+2025-05-24 01:33:49.443 +03:00 [INF] Content root path: C:\Users\USER\Desktop\Ecommerce\Ecommerce.API
+2025-05-24 01:33:50.132 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.html - null null
+2025-05-24 01:33:50.396 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.html - 200 null text/html;charset=utf-8 266.5334ms
+2025-05-24 01:33:50.404 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 01:33:50.404 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/_vs/browserLink - null null
+2025-05-24 01:33:50.422 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 17.7964ms
+2025-05-24 01:33:50.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.6795ms
+2025-05-24 01:33:50.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - null null
+2025-05-24 01:33:50.691 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 155.0703ms
+2025-05-24 01:35:01.150 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Authentication/Create-User - application/json 114
+2025-05-24 01:35:01.172 +03:00 [INF] CORS policy execution failed.
+2025-05-24 01:35:01.174 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 01:35:01.184 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.AuthenticationController.CreateUser (Ecommerce.API)'
+2025-05-24 01:35:01.242 +03:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Ecommerce.Application.DTOs.Identity.CreateUser) on controller Ecommerce.API.Controllers.AuthenticationController (Ecommerce.API).
+2025-05-24 01:35:05.085 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:35:05.488 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-05-24 01:35:05.994 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2025-05-24 01:35:06.039 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:35:06.110 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2025-05-24 01:35:06.149 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-05-24 01:35:06.303 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-05-24 01:35:06.317 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-05-24 01:35:06.352 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-05-24 01:35:06.444 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p17='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p18='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [Name] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+2025-05-24 01:35:06.520 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.ServiceResponse'.
+2025-05-24 01:35:06.541 +03:00 [INF] Executed action Ecommerce.API.Controllers.AuthenticationController.CreateUser (Ecommerce.API) in 5283.9329ms
+2025-05-24 01:35:06.547 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.AuthenticationController.CreateUser (Ecommerce.API)'
+2025-05-24 01:35:06.566 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Authentication/Create-User - 200 null application/json; charset=utf-8 5416.5026ms
+2025-05-24 01:35:11.577 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Category/All - null null
+2025-05-24 01:35:11.588 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:35:11.600 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Ecommerce.API.Controllers.CategoryController (Ecommerce.API).
+2025-05-24 01:35:11.781 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Categories] AS [c]
+2025-05-24 01:35:11.828 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Category.GetCategory, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:35:11.850 +03:00 [INF] Executed action Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API) in 245.3664ms
+2025-05-24 01:35:11.853 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.CategoryController.GetAll (Ecommerce.API)'
+2025-05-24 01:35:11.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Category/All - 200 null application/json; charset=utf-8 279.038ms
+2025-05-24 01:35:22.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Product/All - null null
+2025-05-24 01:35:22.036 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 01:35:22.044 +03:00 [INF] Route matched with {action = "All", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] All() on controller Ecommerce.API.Controllers.ProductController (Ecommerce.API).
+2025-05-24 01:35:22.143 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[Image], [p].[Name], [p].[Price], [p].[Quantity]
+FROM [Products] AS [p]
+2025-05-24 01:35:22.168 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ecommerce.Application.DTOs.Product.GetProduct, Ecommerce.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-24 01:35:22.183 +03:00 [INF] Executed action Ecommerce.API.Controllers.ProductController.All (Ecommerce.API) in 121.4769ms
+2025-05-24 01:35:22.189 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.ProductController.All (Ecommerce.API)'
+2025-05-24 01:35:22.194 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Product/All - 200 null application/json; charset=utf-8 165.8497ms
+2025-05-24 01:37:29.026 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7000/api/Authentication/Login - application/json 60
+2025-05-24 01:37:29.035 +03:00 [INF] CORS policy execution failed.
+2025-05-24 01:37:29.037 +03:00 [INF] Request origin https://localhost:7000 does not have permission to access the resource.
+2025-05-24 01:37:29.042 +03:00 [INF] Executing endpoint 'Ecommerce.API.Controllers.AuthenticationController.LoginUser (Ecommerce.API)'
+2025-05-24 01:37:29.053 +03:00 [INF] Route matched with {action = "LoginUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Ecommerce.Application.DTOs.Identity.LoginUser) on controller Ecommerce.API.Controllers.AuthenticationController (Ecommerce.API).
+2025-05-24 01:37:29.094 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:37:29.111 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:37:29.246 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-24 01:37:29.536 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:37:29.551 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:37:29.564 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-05-24 01:37:29.578 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-05-24 01:37:29.609 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__refreshToken_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[UserId], [r].[token]
+FROM [RefreshTokens] AS [r]
+WHERE [r].[token] = @__refreshToken_0
+2025-05-24 01:37:29.660 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([Id], [UserId], [token])
+VALUES (@p0, @p1, @p2);
+2025-05-24 01:37:29.675 +03:00 [INF] Executing OkObjectResult, writing value of type 'Ecommerce.Application.DTOs.Response.LoginResponse'.
+2025-05-24 01:37:29.685 +03:00 [INF] Executed action Ecommerce.API.Controllers.AuthenticationController.LoginUser (Ecommerce.API) in 624.3168ms
+2025-05-24 01:37:29.690 +03:00 [INF] Executed endpoint 'Ecommerce.API.Controllers.AuthenticationController.LoginUser (Ecommerce.API)'
+2025-05-24 01:37:29.694 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7000/api/Authentication/Login - 200 null application/json; charset=utf-8 668.2114ms
