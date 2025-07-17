@@ -22,7 +22,7 @@ namespace Ecommerce.API.Controllers
             return result.Flag ? Ok(result) : BadRequest(result);
         }
         [HttpPost("RefreshToken/{refreshToken}")]
-        public async Task<IActionResult> RefreshToken(string refreshToken)
+        public async Task<IActionResult> ReTfreshToken(string refreshToken)
         {
             var result = await _authenticationService.ReviveToken(refreshToken);
             return result.Flag ? Ok(result) : BadRequest(result);

@@ -54,7 +54,7 @@ namespace Ecommerce.Application.Services.Implementations.Authentication
             if (!loginResult) return new LoginResponse(Messge: "Email not found or invalid credential.");
             var user = await _userManager.GetUserByEmail(User.Email);
             var claims=await _userManager.GetUserClaims(User.Email);
-            string jwtToken =_tokenManager.GetRefreshToken();
+            string jwtToken = _tokenManager.GenerateToken(claims);
             string refreshToken = _tokenManager.GetRefreshToken();
             int saveTokenResult = 0;
             bool userTokenCheck = await _tokenManager.ValidateRefreshToken(refreshToken);
@@ -74,7 +74,7 @@ namespace Ecommerce.Application.Services.Implementations.Authentication
             string userId =await  _tokenManager.getUserIdByRefreshToken(refreshToken);
             AppUser? user=await _userManager.GetUserById(userId);
             var claims=await _userManager.GetUserClaims(user!.Email!);
-            string newJwtToken = _tokenManager.GetRefreshToken();
+            string newJwtToken = _tokenManager.GenerateToken(claims);
             string newRefreshToken = _tokenManager.GetRefreshToken();
             await _tokenManager.updateRefreshToken(userId, newRefreshToken);
             return new LoginResponse(Flag: true, Token: newJwtToken, RefreshToken : newRefreshToken);
